@@ -60,6 +60,8 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         let userName = photo["user"]!["username"] as! String
         let userImageURL = photo["images"]!["standard_resolution"]!!["url"] as! String
         let imageURl = NSURL(string: userImageURL)
+        
+        cell.userName.text = userName
         cell.userImage.setImageWithURL(imageURl!)
         print(imageURl)
         return cell
